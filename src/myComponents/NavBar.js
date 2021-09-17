@@ -1,22 +1,43 @@
 import React, { Component, useEffect } from "react";
 import AddCandidate from "./AddCandidate";
+import DeleteCandidate from "./DeleteCandidate";
 import "./NavBar.css";
+import RegisterVoters from "./RegisterVoters";
 
 export class NavBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      change: 0,
+      change: 3,
     };
   }
   render() {
     let content;
     {
-      this.state.change === 0 ? (
-        (content = <AddCandidate />)
-      ) : this.state.change === 1 ? (
-        <AddCandidate />
-      ) : null;
+      this.state.change === 0
+        ? (content = (
+            <AddCandidate
+              addCandidate={this.props.addCandidate}
+              voting={this.props.voting}
+            />
+          ))
+        : this.state.change === 3
+        ? (content = (
+            <DeleteCandidate
+              deleteCandidate={this.props.deleteCandidate}
+              candidate={this.props.candidate}
+              voting={this.props.voting}
+            />
+          ))
+        : this.state.change === 1
+        ? (content = (
+            <RegisterVoters
+              register={this.props.register}
+              voting={this.props.voting}
+              adminRegister={this.props.adminRegister}
+            />
+          ))
+        : null;
     }
     return (
       <div className="main">

@@ -1,9 +1,11 @@
 import React, { Component } from "react";
+import NavigationBar from "../NavigationBar";
 import "./AddCandidate.css";
 
 export class AddCandidate extends Component {
   submit = (e) => {
     e.preventDefault();
+    this.props.addCandidate(this.state.name);
   };
   constructor(props) {
     super(props);
@@ -15,41 +17,48 @@ export class AddCandidate extends Component {
 
   render() {
     return (
-      <div className="add">
-        <div className="header">Add a new Candidate</div>
-        <form action="">
-          <div className="body">
-            <div className="form">
-              <div className="inp">
-                Name of candidate:
-                <div>
-                  <input
-                    className="input"
-                    onChange={(e) => this.setState({ name: e.target.value })}
-                    type="text"
-                    name=""
-                    id=""
-                  />
+      <div className="main">
+        <div className="top">
+          <div className="header">Add a new Candidate</div>
+          <NavigationBar />
+        </div>
+        <div className="add">
+          <form action="" onSubmit={this.submit}>
+            <div className="body">
+              <div className="form">
+                <div className="inp">
+                  Name of candidate:
+                  <div>
+                    <input
+                      className="input"
+                      onChange={(e) => this.setState({ name: e.target.value })}
+                      type="text"
+                      name=""
+                      id=""
+                    />
+                  </div>
+                </div>
+                <div className="inp">
+                  <div className="label">Account Address:</div>
+                  <div>
+                    <input
+                      className="input"
+                      onChange={(e) =>
+                        this.setState({ address: e.target.value })
+                      }
+                      type="text"
+                      name=""
+                      id=""
+                    />
+                  </div>
                 </div>
               </div>
-              <div className="inp">
-                <div className="label">Account Address:</div>
-                <div>
-                  <input
-                    className="input"
-                    onChange={(e) => this.setState({ address: e.target.value })}
-                    type="text"
-                    name=""
-                    id=""
-                  />
-                </div>
-              </div>
+              <button className="button" type="submit">
+                Add Candidate
+              </button>
             </div>
-            <button className="button" type="submit">
-              Add Candidate
-            </button>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     );
   }

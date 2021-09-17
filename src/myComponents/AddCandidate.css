@@ -3,14 +3,7 @@
   flex-direction: column;
 }
 
-.header {
-  background-color: lightgreen;
-  padding: 20px;
-  text-align: center;
-  font-size: 30px;
-  color: white;
-  font-weight: 800;
-}
+
 
 .body {
   position: relative;
@@ -39,9 +32,8 @@
   flex-direction: row;
 }
 
-
 .input {
-  padding:10px;
+  padding: 10px;
 }
 
 .button {
@@ -59,3 +51,5 @@
 .button:hover {
   background-color: green;
 }
+
+

@@ -1,5 +1,10 @@
-* {
-    margin: 10px;
-    margin-top: 0px;
-    /* background-color: whitesmoke; */
+.loading {
+  position: fixed;
+  top: 36%;
+  left: 38%;
+  font-size: 70px;
+  font-weight: 800;
+  box-shadow: 2px 2px 10px #06f5cd;
+  padding: 30px;
+  border-radius: 20px;
 }
