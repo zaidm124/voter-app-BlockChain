@@ -24,7 +24,7 @@ export class AddCandidate extends Component {
         </div>
         <div className="add">
           <form action="" onSubmit={this.submit}>
-            <div className="body">
+            <div className="body shadow">
               <div className="form">
                 <div className="inp">
                   Name of candidate:
@@ -53,9 +53,11 @@ export class AddCandidate extends Component {
                   </div>
                 </div>
               </div>
-              <button className="button" type="submit">
-                Add Candidate
-              </button>
+              <div className="btn">
+                <button className="button" type="submit">
+                  Add Candidate
+                </button>
+              </div>
             </div>
           </form>
         </div>

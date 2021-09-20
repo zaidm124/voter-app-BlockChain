@@ -87,7 +87,7 @@ function App() {
     console.log(voting);
     await voting.methods
       .addCandidate(name)
-      .send({ from: "0x7FB2E828386F0450E82EA394c4934DcB266D89c6" })
+      .send({ from: "0x72654E38E334a948d0e4753870417B25fb70E65C" })
       .on("confirmation", () => {
         window.location.reload();
       })
@@ -102,7 +102,7 @@ function App() {
     // if (window.confirm(id)) {
     await voting.methods
       .deleteCandidate(id)
-      .send({ from: "0x7FB2E828386F0450E82EA394c4934DcB266D89c6" })
+      .send({ from: "0x72654E38E334a948d0e4753870417B25fb70E65C" })
       .on("confirmation", () => {
         window.location.reload();
       })
@@ -118,7 +118,7 @@ function App() {
     window.alert(address);
     await voting.methods
       .allowedByAdmin(address)
-      .send({ from: "0x7FB2E828386F0450E82EA394c4934DcB266D89c6" })
+      .send({ from: "0x72654E38E334a948d0e4753870417B25fb70E65C" })
       .on("confirmation", () => {
         window.location.reload();
       })

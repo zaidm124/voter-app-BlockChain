@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import NavigationBar from "../NavigationBar";
+import "./RegisterVoter.css";
 
 export class RegisterVoters extends Component {
   onSubmit = (address) => {
@@ -16,7 +17,7 @@ export class RegisterVoters extends Component {
           <div className="header">Register a Voter</div>
           <NavigationBar />
         </div>
-        <div className="add">
+        <div className="add" id="flex">
           {this.props.register.map((value) => {
             return (
               <form
@@ -25,9 +26,9 @@ export class RegisterVoters extends Component {
                   this.onSubmit(value);
                 }}
               >
-                <div className="body">
-                  <div className="candidate">
-                    <div className="name">{value}</div>
+                <div className="candidate">
+                  <div className="name">{value}</div>
+                  <div className="btn">
                     <button className="button" type="submit">
                       Register Voter
                     </button>

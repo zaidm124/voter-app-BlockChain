@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import NavigationBar from "../NavigationBar";
+import "./RegisterVoter.css";
 
 export class DelCandidate extends Component {
   submit = (id) => {
@@ -18,7 +19,7 @@ export class DelCandidate extends Component {
           <div className="header">Delete a Candidate</div>
           <NavigationBar />
         </div>
-        <div className="add">
+        <div className="add" id="flex">
           {this.props.candidate.map((value, key) => {
             return (
               <form
